@@ -111,7 +111,7 @@ real_cc :=
 gcc_cc := CROSS_COMPILE=$(KERNEL_CROSS_COMPILE) CROSS_COMPILE_ARM32=$(KERNEL_CROSS_COMPILE_ARM32) CROSS_COMPILE_COMPAT=$(KERNEL_CROSS_COMPILE_ARM32)
 ifeq ($(KERNEL_LLVM_SUPPORT),true)
   ifeq ($(KERNEL_CUSTOM_LLVM),true)
-    KERNEL_CUSTOM_LLVM_PATH ?= $(SOURCE_ROOT)/prebuilts/clang-standalone
+    KERNEL_CUSTOM_LLVM_PATH ?= $(SOURCE_ROOT)/prebuilts/clang/host/linux-x86/clang-r547379
     KERNEL_LLVM_BIN := $(KERNEL_CUSTOM_LLVM_PATH)/bin
     $(warning Device is using custom LLVM toolchain for the kernel)
   else
